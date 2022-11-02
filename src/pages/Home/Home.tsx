@@ -1,14 +1,11 @@
-import Footer from "../../components/Footer/Footer"
-import Header from "../../components/Header/Header"
-import styles from "./home.module.css"
+import styles from "./home.module.css";
 
 const Home = () => {
   return (
     <main>
-        <Header/>
-        <Footer/>
+      home
     </main>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
