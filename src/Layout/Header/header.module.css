@@ -1,0 +1,22 @@
+.container{
+    position: absolute;
+    inset: 10px 0 0 0;
+    width: 95%;
+    border-radius: 5px;
+    margin: 0 auto;
+    height: 62px;
+    background: #182752 ;
+}
+.nav{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.link:hover{
+    color: #fff !important;
+}
+/* .active{
+    d-none d-md-block text-white-50 fw-bold
+    display: none;
+    color: #fff;
+    font-weight: bold;
+} */
