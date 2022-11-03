@@ -1,4 +1,5 @@
-import { FC } from "react";
+import { FC, Suspense } from "react";
+import Loading from "../common/Loading/Loading";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 
@@ -10,7 +11,7 @@ const Layout: FC<IProps> = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+      <Suspense fallback={<Loading/>}>{children}</Suspense>
       <Footer />
     </>
   );

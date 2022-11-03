@@ -1,0 +1,13 @@
+.container{
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+.container img{
+    width: 200px;
+    height: 200px;
+}
