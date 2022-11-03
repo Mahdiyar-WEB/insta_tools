@@ -13,6 +13,12 @@ const Header = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
+  window.onresize = () => {
+    if (window.innerWidth > 767) {
+      setAnchorEl(null);
+    }
+  };
+
   const handleClick = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
