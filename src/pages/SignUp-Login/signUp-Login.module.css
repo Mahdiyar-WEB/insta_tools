@@ -1,0 +1,10 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.tabs{
+    width: fit-content !important;
+    margin: 0 auto;
+}

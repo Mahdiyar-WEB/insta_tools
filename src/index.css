@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-  min-height: 100vh;
+  height: 100%;
 }
 a{
   text-decoration: none !important;
@@ -14,4 +14,6 @@ ul{
 }
 #root{
   position: relative;
+  background: #D4DAEB;
+  min-height: 100vh;
 }
