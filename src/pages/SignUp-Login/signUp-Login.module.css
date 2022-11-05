@@ -1,28 +1,20 @@
 .container{
-    min-height: 600px;
-    display:flex;
-    justify-content: center;
-    padding-top: 100px;
+    padding-top: 110px;
+    height: 100%;
 }
-.content{
-    width: 60%;
-    border-radius: 20px;
+.contentContainer{
+    min-height: 530px;
 }
-.tabs{
-    width: fit-content !important;
-    margin: 0 auto;
-}
-@media screen and (max-width:991px) {
-    .content{
-        border-radius: 8px;
-    }
-}
-@media screen and (max-width:600px) {
-    .container{
-        min-height: 550px;
+@media screen and (max-width:768px) {
+    .contentContainer{
+        min-height: fit-content;
     }
     .content{
-        width: 85%;
-        border-radius: 8px;
+        border-radius: 1px !important;
+    }
+}
+@media screen and (max-width:992px) {
+    .content{
+        border-radius: 8px !important;
     }
 }

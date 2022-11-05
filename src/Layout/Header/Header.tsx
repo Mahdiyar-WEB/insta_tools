@@ -107,17 +107,17 @@ const Header = () => {
         </Menu>
         <ul className="d-none d-md-flex gap-5 m-0 p-0 fw-bold">
           <li>
-            <HashLink className={`text-white-50 ${styles.link}`} to="/#tools">
+            <HashLink className={`${styles.link}`} to="/#tools">
               Tools
             </HashLink>
           </li>
           <li>
-            <HashLink className={`text-white-50 ${styles.link}`} to="/#about">
+            <HashLink className={`${styles.link}`} to="/#about">
               About
             </HashLink>
           </li>
           <li>
-            <HashLink className={`text-white-50 ${styles.link}`} to="/#faq">
+            <HashLink className={`${styles.link}`} to="/#faq">
               FAQ
             </HashLink>
           </li>
@@ -126,7 +126,7 @@ const Header = () => {
           className={({ isActive }) =>
             isActive
               ? `d-none d-md-block text-white fw-bold`
-              : `d-none d-md-block text-white-50 fw-bold`
+              : `d-none d-md-block ${styles.link} fw-bold`
           }
           to="/login-signup"
         >

@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button, FormControlLabel, TextField, Checkbox } from "@mui/material";
 import { useState } from "react";
+import ForgetPassword from "../ForgetPassword/ForgetPassword";
 
 const initialValues = {
   username: "",
@@ -19,7 +20,8 @@ const validationSchema = Yup.object({
 
 const Login = () => {
   const onSubmit = (values: any) => {};
-  const [rememberMe,setRememberMe] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
+  const [showForgetPassword, setShowForgetPassword] = useState(false);
 
   const formik = useFormik({
     initialValues,
@@ -60,12 +62,21 @@ const Login = () => {
         }
         label="Remember me"
       />
+      <button
+        type="button"
+        className={`mt-3 text-start border border-0 bg-transparent text-primary ${styles.forget}`}
+        onClick={() => setShowForgetPassword(!showForgetPassword)}
+      >
+        Forget your password?
+      </button>
+
       <Button
-        className="ms-auto col-md-4 col-12 d-block mt-4"
+        className="col-md-4 col-12  mt-4"
         variant="contained"
       >
         Login
       </Button>
+      {showForgetPassword && <ForgetPassword />}
     </form>
   );
 };
