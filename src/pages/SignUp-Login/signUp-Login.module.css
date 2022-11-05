@@ -1,10 +1,28 @@
 .container{
-    height: 100vh;
-    display: flex;
+    min-height: 600px;
+    display:flex;
     justify-content: center;
     padding-top: 100px;
+}
+.content{
+    width: 60%;
+    border-radius: 20px;
 }
 .tabs{
     width: fit-content !important;
     margin: 0 auto;
+}
+@media screen and (max-width:991px) {
+    .content{
+        border-radius: 8px;
+    }
+}
+@media screen and (max-width:600px) {
+    .container{
+        min-height: 550px;
+    }
+    .content{
+        width: 85%;
+        border-radius: 8px;
+    }
 }

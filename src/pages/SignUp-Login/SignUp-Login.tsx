@@ -1,6 +1,8 @@
 import styles from "./signUp-Login.module.css";
 import { Box, Tabs, Tab, Typography } from "@mui/material";
 import { useState } from "react";
+import Login from "../../components/Login/Login";
+import Signup from "../../components/Signup/Signup";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -19,11 +21,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -43,9 +41,11 @@ const SignUp_Login = () => {
 
   return (
     <main className={styles.container}>
-      <div className="container bg-white rounded rounded-4 row p-0 overflow-hidden">
-        <div className="d-none d-md-block col-5 bg-primary"></div>
-        <div className="col-12 col-md-7 pt-4">
+      <div
+        className={`container bg-white row p-2 overflow-hidden ${styles.content}`}
+      >
+        <div className="d-none d-lg-block rounded rounded-4 col-5 bg-primary"></div>
+        <div className="col-12 col-lg-7 pt-4">
           <Box sx={{ width: "100%" }}>
             <Box>
               <Tabs
@@ -55,14 +55,18 @@ const SignUp_Login = () => {
                 className={`${styles.tabs}`}
               >
                 <Tab className="fw-bold fs-6" label="Login" {...a11yProps(0)} />
-                <Tab className="fw-bold fs-6" label="Sign-up" {...a11yProps(1)} />
+                <Tab
+                  className="fw-bold fs-6"
+                  label="Sign-up"
+                  {...a11yProps(1)}
+                />
               </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-              Item One
+              <Login />
             </TabPanel>
             <TabPanel value={value} index={1}>
-              Item Two
+              <Signup />
             </TabPanel>
           </Box>
         </div>
