@@ -14,8 +14,8 @@ interface IRoutes{
 const routes:IRoutes[] = [
     {path:"/", element:<Home/>},
     {path:"/*", element:<NotFound/>},
-    {path:"/panel", element:<ClientPanel/>},
     {path:"/login-signup", element:<SignUp_Login/>},
+    {path:"/panel/*", element:<ClientPanel/>},
 ];
 
 export default routes;
